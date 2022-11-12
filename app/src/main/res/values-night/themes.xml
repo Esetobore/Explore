@@ -16,7 +16,7 @@
     <!-- Dark mode -->
     <!-- Screen background if dark mode on-->
     <style name = "SCREEN">
-        <item name= "android:background">#000000</item>
+        <item name= "android:background">#000F24</item>
     </style>
     <!--Texts background if dark mode on -->
     <style name="TEXT">
@@ -29,6 +29,6 @@
     </style>
     <!--CardView background if Dark mode on -->
     <style name="CARD">
-        <item name = "cardBackgroundColor">#3C3636</item>
+        <item name = "cardBackgroundColor">#000F24</item>
     </style>
 </resources>

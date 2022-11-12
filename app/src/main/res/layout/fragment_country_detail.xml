@@ -4,29 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    style="@style/SCREEN"
     tools:context=".ui.CountryDetailFragment">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="0dp"
+        style="@style/CARD"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
 
             <TextView
                 android:id="@+id/txtName"
+                style="@style/TEXT"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
                 android:layout_marginStart="136dp"
                 android:layout_marginTop="8dp"
-                android:fontFamily="@font/axiforma_extra_bold"
-                android:text="Andonna"
+                android:fontFamily="@font/gabriela_alt_bold"
+                android:text="Country"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -39,6 +43,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="11dp"
                 android:paddingLeft="10dp"
+                style="@style/BUTTON"
                 android:paddingTop="5dp"
                 android:paddingRight="10dp"
                 android:paddingBottom="5dp"
@@ -46,7 +51,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
     <RelativeLayout
@@ -73,164 +78,341 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <TextView
-                    android:id="@+id/txtPopulation"
+                    android:id="@+id/vPopulation"
+                    style="@style/TEXT"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginStart="7dp"
+                    android:fontFamily="@font/axiforma_bold"
+                    android:layout_alignStart="@id/vCoordinates"
                     android:layout_marginTop="7dp"
                     android:layout_marginEnd="7dp"
                     android:layout_marginBottom="7dp"
-                    android:text="Population"
-                    android:textSize="20sp"
-                    android:textStyle="bold">
-                </TextView>
+                    android:text="Population:"
+                    android:textSize="20sp"/>
+
                 <TextView
-                    android:id="@+id/txtRegion"
+                    android:id="@+id/txtPopulation"
+                    style="@style/TEXT"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Region"
-                    android:textSize="20sp"
-                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="186dp"
+                    android:hint="Population"
+                    android:textSize="20sp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/vRegion"
+                    style="@style/TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_below="@id/txtPopulation"
-                    android:layout_margin="7dp">
+                    android:fontFamily="@font/axiforma_bold"
+                    android:layout_alignStart="@id/vCoordinates"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:text="Region:"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/txtRegion"
+                    style="@style/TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtPopulation"
+                    android:layout_alignTop="@id/vRegion"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="259dp"
+                    android:hint="Region"
+                    android:textSize="20sp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/vCapital"
+                    style="@style/TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtRegion"
+                    android:layout_alignStart="@id/vCoordinates"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:fontFamily="@font/axiforma_bold"
+                    android:text="Country Capital: "
+                    android:textSize="20sp">
 
                 </TextView>
 
                 <TextView
                     android:id="@+id/txtCapital"
+                    style="@style/TEXT"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Country Capital"
-                    android:textSize="20sp"
-                    android:layout_centerHorizontal="true"
                     android:layout_below="@id/txtRegion"
-                    android:layout_margin="7dp">
+                    android:layout_alignTop="@+id/vCapital"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="-1dp"
+                    android:layout_marginEnd="167dp"
+                    android:hint="Capital"
+                    android:textSize="20sp">
 
                 </TextView>
 
                 <TextView
-                    android:id="@+id/txtArea"
+                    android:id="@+id/vArea"
+                    style="@style/TEXT"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/txtCapital"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginStart="7dp"
+                    android:layout_alignStart="@id/vCoordinates"
                     android:layout_marginTop="7dp"
                     android:layout_marginEnd="7dp"
                     android:layout_marginBottom="7dp"
-                    android:text="Area"
+                    android:text="Area: "
+                    android:textSize="20sp"
+                    android:fontFamily="@font/axiforma_bold" />
+
+                <TextView
+                    android:id="@+id/txtArea"
+                    style="@style/TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtCapital"
+                    android:layout_alignTop="@+id/vArea"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="305dp"
+                    android:hint="Area"
                     android:textSize="20sp">
 
                 </TextView>
+
+                <TextView
+                    android:id="@+id/vCountryLanguage"
+                    style="@style/TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/vArea"
+                    android:layout_alignStart="@id/vCoordinates"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:text="Country Language:"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/axiforma_bold" />
 
                 <TextView
                     android:id="@+id/txtCountryLanguage"
+                    style="@style/TEXT"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Country Language"
-                    android:textSize="20sp"
-                    android:layout_centerHorizontal="true"
                     android:layout_below="@id/txtArea"
-                    android:layout_margin="7dp">
-
-                </TextView>
-                <TextView
-                    android:id="@+id/txtBorders"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Border"
-                    android:textSize="20sp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_below="@id/txtCountryLanguage"
-                    android:layout_margin="7dp">
-
-                </TextView>
+                    android:layout_alignTop="@+id/vCountryLanguage"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="36dp"
+                    android:hint="Country Language"
+                    android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/txtOfficialLanguage"
+                    android:id="@+id/vBorders"
+                    style="@style/TEXT"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/txtBorders"
-                    android:layout_centerHorizontal="true"
-                    android:layout_margin="7dp"
-                    android:text="OfficialLanguage"
-                    android:textSize="20sp">
-
-                </TextView>
-
-                <TextView
-                    android:id="@+id/txtReligion"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/txtOfficialLanguage"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginStart="7dp"
-                    android:layout_marginTop="7dp"
+                    android:layout_below="@id/vCountryLanguage"
+                    android:layout_alignStart="@id/vCoordinates"
                     android:layout_marginEnd="7dp"
                     android:layout_marginBottom="7dp"
-                    android:text="Start Of Week"
-                    android:textSize="20sp">
+                    android:text="Border:"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/axiforma_bold" />
 
-                </TextView>
+                <TextView
+                    android:id="@+id/txtBorders"
+                    style="@style/TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtArea"
+                    android:layout_alignTop="@+id/vBorders"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="265dp"
+                    android:hint="Border"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/vTimeZone"
+                    style="@style/TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/vBorders"
+                    android:layout_alignStart="@id/vCoordinates"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:text="Time zone:"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/axiforma_bold" />
+
+                <TextView
+                    android:id="@+id/txtTimeZone"
+                    style="@style/TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtArea"
+                    android:layout_alignTop="@+id/vTimeZone"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="196dp"
+                    android:hint="Time Zone"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/vCoordinates"
+                    style="@style/TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/vTimeZone"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:text="Coordinates:"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/axiforma_bold" />
+
+                <TextView
+                    android:id="@+id/txtCoordinates"
+                    style="@style/TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtArea"
+                    android:layout_alignTop="@+id/vCoordinates"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="160dp"
+                    android:hint="Coordinates"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/vStartOfWeek"
+                    style="@style/TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/vCoordinates"
+                    android:layout_alignStart="@id/vCoordinates"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:text="Start Of Week:"
+                    android:fontFamily="@font/axiforma_bold"
+                    android:textSize="20sp"/>
 
                 <TextView
                     android:id="@+id/txtStartOfWeek"
+                    style="@style/TEXT"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/txtReligion"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginTop="7dp"
+                    android:layout_below="@id/txtArea"
+                    android:layout_alignTop="@+id/vStartOfWeek"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="130dp"
+                    android:hint="Start Of Week"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/vCapitalInfo"
+                    style="@style/TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/vStartOfWeek"
+                    android:layout_alignStart="@id/vCoordinates"
                     android:layout_marginEnd="7dp"
                     android:layout_marginBottom="7dp"
-                    android:text="Start Of Week"
-                    android:textSize="20sp">
+                    android:text="Capital Info:"
+                    android:fontFamily="@font/axiforma_bold"
+                    android:textSize="20sp"/>
 
-                </TextView>
                 <TextView
                     android:id="@+id/txtCapitalInfo"
+                    style="@style/TEXT"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/txtStartOfWeek"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginTop="7dp"
+                    android:layout_below="@id/txtArea"
+                    android:layout_alignTop="@+id/vCapitalInfo"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="170dp"
+                    android:hint="Capital Info"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/vSubRegion"
+                    style="@style/TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/vCapitalInfo"
+                    android:fontFamily="@font/axiforma_bold"
+                    android:layout_alignStart="@id/vCoordinates"
                     android:layout_marginEnd="7dp"
                     android:layout_marginBottom="7dp"
-                    android:text="Capital Info"
-                    android:textSize="20sp">
-
-                </TextView>
+                    android:text="Sub Region:"
+                    android:textSize="20sp"/>
                 <TextView
                     android:id="@+id/txtSubRegion"
+                    style="@style/TEXT"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/txtCapitalInfo"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginTop="7dp"
-                    android:layout_marginEnd="7dp"
-                    android:layout_marginBottom="7dp"
-                    android:text="Sub Region"
-                    android:textSize="20sp">
+                    android:layout_below="@id/txtArea"
+                    android:layout_alignTop="@+id/vSubRegion"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="180dp"
+                    android:hint="Sub Region"
+                    android:textSize="20sp" />
 
-                </TextView>
                 <TextView
-                    android:id="@+id/txtCurrency"
+                    android:id="@+id/vCurrency"
+                    style="@style/TEXT"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/txtSubRegion"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginStart="12dp"
+                    android:fontFamily="@font/axiforma_bold"
+                    android:layout_alignStart="@id/vCoordinates"
                     android:layout_marginTop="7dp"
                     android:layout_marginEnd="7dp"
                     android:layout_marginBottom="7dp"
-                    android:text="Currency"
-                    android:textSize="20sp">
-
-                </TextView>
+                    android:text="Currency:"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:id="@+id/txtCurrency"
+                    style="@style/TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtArea"
+                    android:layout_alignTop="@+id/vCurrency"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="222dp"
+                    android:hint="Currency"
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/vDrivingSide"
+                    style="@style/TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/vCurrency"
+                    android:fontFamily="@font/axiforma_bold"
+                    android:layout_alignStart="@id/vCoordinates"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:text="Driving Side:"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:id="@+id/txtDrivingSide"
+                    style="@style/TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtArea"
+                    android:layout_alignTop="@+id/vDrivingSide"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="170dp"
+                    android:hint="Driving Side"
+                    android:textSize="20sp" />
 
             </RelativeLayout>
         </ScrollView>

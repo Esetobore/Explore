@@ -54,8 +54,10 @@ class CountryDetailFragment : Fragment() {
                 txtName.text = details.name?.official
                 txtCurrency.text = "F: ${details.demonyms?.eng?.f}, M:${details.demonyms?.eng?.m}"
                 txtStartOfWeek.text = details.startOfWeek
+                txtCoordinates.text = details.latlng.toString()
                 txtBorders.text = details.borders?.joinToString(",")
                 txtCapitalInfo.text = details.capitalInfo?.latlng?.toString()
+                txtDrivingSide.text = details.car?.side
                 txtCountryLanguage.text = details.languages.toString()
                 txtArea.text = details.area.toString()
             }

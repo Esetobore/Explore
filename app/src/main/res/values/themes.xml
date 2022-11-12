@@ -29,7 +29,7 @@
 </style>
     <!--CardView background if Light mode on -->
 <style name="CARD">
-<item name = "cardBackgroundColor">#8C7373</item>
+<item name = "cardBackgroundColor">#D3E9DE</item>
 </style>
     <style name="Theme.Explore.NoActionBar">
         <item name="windowActionBar">false</item>
