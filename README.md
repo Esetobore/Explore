@@ -40,7 +40,7 @@ Explore is an application that explores all the various countries and various in
 *  Once you click the link you are redirect and shown an app there you select a preferred phone size and click play.
 
 ## Challenges
-*  I encountered various Chanllenges from working with the api to creating an argument that ment to aid in the details page and is currently still unresolved as so the application is on finished
+*  I encountered various Chanllenges from working with the api to creating an argument that ment to aid in the details page and is currently still unresolved as so the application is **still in development**
 
 
 
