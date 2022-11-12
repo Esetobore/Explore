@@ -16,11 +16,6 @@
         android:theme="@style/Theme.Explore"
         tools:targetApi="31">
         <activity
-            android:name=".ExplorePage"
-            android:exported="false"
-            android:label="@string/title_activity_explore_page"
-            android:theme="@style/Theme.Explore.NoActionBar" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

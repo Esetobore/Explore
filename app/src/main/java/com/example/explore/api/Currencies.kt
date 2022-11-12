@@ -1,5 +1,8 @@
 package com.example.explore.api
 
+import com.example.explore.api.country.*
+import com.example.explore.api.language.*
+
 data class Currencies(
     val AED: AED,
     val AFN: AFN,

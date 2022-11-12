@@ -22,8 +22,10 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val fragHost = supportFragmentManager.findFragmentById(R.id.fragHost) as NavHostFragment
-        navController = fragHost.findNavController()
+        val fragHost = supportFragmentManager.findFragmentById(R.id.fragHost) as NavHostFragment?
+        if (fragHost != null) {
+            navController = fragHost.findNavController()
+        }
     }
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp() || super.onSupportNavigateUp()

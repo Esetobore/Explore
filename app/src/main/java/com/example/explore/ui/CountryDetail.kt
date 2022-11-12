@@ -1,12 +1,18 @@
 package com.example.explore.ui
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
+import androidx.navigation.NavArgs
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.navArgs
 import com.example.explore.R
+import com.example.explore.api.ExploreResponse
 import com.example.explore.databinding.FragmentCountryDetailBinding
 import com.example.explore.databinding.FragmentCountrypageBinding
 import com.example.explore.viewmodel.ExploreViewModel
@@ -25,8 +31,8 @@ class CountryDetail : Fragment() {
         return binding.root
     }
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
     }
 }

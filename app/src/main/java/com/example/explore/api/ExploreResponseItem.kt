@@ -1,39 +1,84 @@
 package com.example.explore.api
 
+import android.annotation.SuppressLint
+import android.os.Parcelable
+import com.example.explore.api.language.Car
+import com.example.explore.api.language.Gini
+import com.example.explore.api.language.Idd
+import com.example.explore.api.language.Maps
+import com.google.gson.annotations.SerializedName
+import java.io.Serializable
+
+
 data class ExploreResponseItem(
-    val altSpellings: List<String>,
-    val area: Double,
-    val borders: List<String>,
-    val capital: List<String>,
-    val capitalInfo: CapitalInfo,
-    val car: Car,
-    val cca2: String,
-    val cca3: String,
-    val ccn3: String,
-    val cioc: String,
-    val coatOfArms: CoatOfArms,
-    val continents: List<String>,
-    val currencies: Currencies,
-    val demonyms: Demonyms,
-    val fifa: String,
-    val flag: String,
-    val flags: Flags,
-    val gini: Gini,
-    val idd: Idd,
-    val independent: Boolean,
-    val landlocked: Boolean,
-    val languages: Languages,
-    val latlng: List<Double>,
-    val maps: Maps,
-    val name: Name,
-    val population: Int,
-    val postalCode: PostalCode,
-    val region: String,
-    val startOfWeek: String,
-    val status: String,
-    val subregion: String,
-    val timezones: List<String>,
-    val tld: List<String>,
-    val translations: Translations,
-    val unMember: Boolean
-)
+    @SerializedName("altSpellings")
+    val altSpellings: List<String>?,
+    @SerializedName("area")
+    val area: Double?,
+    @SerializedName("borders")
+    val borders: List<String>?,
+    @SerializedName("capital")
+    val capital: List<String>?,
+    @SerializedName("capitalInfo")
+    val capitalInfo: CapitalInfo?,
+    @SerializedName("car")
+    val car: Car?,
+    @SerializedName("cca2")
+    val cca2: String?,
+    @SerializedName("cca3")
+    val cca3: String?,
+    @SerializedName("ccn3")
+    val ccn3: String?,
+    @SerializedName("cioc")
+    val cioc: String?,
+    @SerializedName("coatOfArms")
+    val coatOfArms: CoatOfArms?,
+    @SerializedName("continents")
+    val continents: List<String>?,
+    @SerializedName("currencies")
+    val currencies: Currencies?,
+    @SerializedName("demonyms")
+    val demonyms: Demonyms?,
+    @SerializedName("fifa")
+    val fifa: String?,
+    @SerializedName("flag")
+    val flag: String?,
+    @SerializedName("flags")
+    val flags: Flags?,
+    @SerializedName("gini")
+    val gini: Gini?,
+    @SerializedName("idd")
+    val idd: Idd?,
+    @SerializedName("independent")
+    val independent: Boolean?,
+    @SerializedName("landlocked")
+    val landlocked: Boolean?,
+    @SerializedName("languages")
+    val languages: Languages?,
+    @SerializedName("latlng")
+    val latlng: List<Double>?,
+    @SerializedName("maps")
+    val maps: Maps?,
+    @SerializedName("name")
+    val name: Name?,
+    @SerializedName("population")
+    val population: Int?,
+    @SerializedName("postalCode")
+    val postalCode: PostalCode?,
+    @SerializedName("region")
+    val region: String?,
+    @SerializedName("startOfWeek")
+    val startOfWeek: String?,
+    @SerializedName("status")
+    val status: String?,
+    @SerializedName("subregion")
+    val subregion: String?,
+    @SerializedName("timezones")
+    val timezones: List<String>?,
+    @SerializedName("tld")
+    val tld: List<String>?,
+    @SerializedName("translations")
+    val translations: Translations?,
+    @SerializedName("unMember")
+    val unMember: Boolean?
+): Serializable

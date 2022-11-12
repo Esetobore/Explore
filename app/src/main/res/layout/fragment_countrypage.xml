@@ -108,7 +108,7 @@
         android:id="@+id/country_list"
         android:layout_width="409dp"
         android:layout_height="573dp"
-        android:layout_marginTop="154dp"
+        android:layout_marginTop="170dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

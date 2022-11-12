@@ -1,5 +1,9 @@
 package com.example.explore.api
 
+import com.example.explore.api.country.Ell
+import com.example.explore.api.country.Khm
+import com.example.explore.api.language.*
+
 data class NativeName(
     val afr: Afr,
     val amh: Amh,

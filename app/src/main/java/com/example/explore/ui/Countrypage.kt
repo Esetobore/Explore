@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.explore.MainActivity
 import com.example.explore.R
@@ -15,6 +16,7 @@ import com.example.explore.adapter.ExploreAdapter
 import com.example.explore.databinding.FragmentCountrypageBinding
 import com.example.explore.util.Resource
 import com.example.explore.viewmodel.ExploreViewModel
+import kotlinx.android.synthetic.main.country.*
 import retrofit2.Response
 
 
@@ -26,15 +28,25 @@ class Countrypage : Fragment() {
      val TAG = "CountryPage"
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?
-    {
-        _binding = FragmentCountrypageBinding.inflate(inflater, container, false)
-        return binding.root
-    }
+    { _binding = FragmentCountrypageBinding.inflate(inflater, container, false)
+        return binding.root }
 
      override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = (activity as MainActivity).viewModel
         setupRecyclerView()
+
+         exploreAdapter.setOnItemClickListener {
+             val bundle = Bundle().apply {
+                 putSerializable("explore",it)
+             }
+             findNavController().navigate(
+                 R.id.action_countrypage_to_countryDetail,
+                 bundle
+             )
+         }
+
+
          viewModel.exploreAll.observe(viewLifecycleOwner, Observer {
              when(it){
                  is Resource.Success ->{
