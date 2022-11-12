@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.CountryDetail">
+    tools:context=".ui.CountryDetailFragment">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -20,7 +20,7 @@
 
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/txtName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="136dp"
@@ -66,13 +66,174 @@
 
         </ImageView>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/DetailsRV"
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/countryImage" />
+            android:layout_below="@id/countryImage" >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txtPopulation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:text="Population"
+                    android:textSize="20sp"
+                    android:textStyle="bold">
+                </TextView>
+                <TextView
+                    android:id="@+id/txtRegion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Region"
+                    android:textSize="20sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/txtPopulation"
+                    android:layout_margin="7dp">
 
+                </TextView>
 
+                <TextView
+                    android:id="@+id/txtCapital"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Country Capital"
+                    android:textSize="20sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/txtRegion"
+                    android:layout_margin="7dp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/txtArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtCapital"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:text="Area"
+                    android:textSize="20sp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/txtCountryLanguage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Country Language"
+                    android:textSize="20sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/txtArea"
+                    android:layout_margin="7dp">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/txtBorders"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Border"
+                    android:textSize="20sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/txtCountryLanguage"
+                    android:layout_margin="7dp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/txtOfficialLanguage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtBorders"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="7dp"
+                    android:text="OfficialLanguage"
+                    android:textSize="20sp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/txtReligion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtOfficialLanguage"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:text="Start Of Week"
+                    android:textSize="20sp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/txtStartOfWeek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtReligion"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:text="Start Of Week"
+                    android:textSize="20sp">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/txtCapitalInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtStartOfWeek"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:text="Capital Info"
+                    android:textSize="20sp">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/txtSubRegion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtCapitalInfo"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:text="Sub Region"
+                    android:textSize="20sp">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/txtCurrency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtSubRegion"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:text="Currency"
+                    android:textSize="20sp">
+
+                </TextView>
+
+            </RelativeLayout>
+        </ScrollView>
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
