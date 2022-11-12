@@ -9,13 +9,15 @@ Explore is an application that explores all the various countries and various in
 * **Details Page** this page shows in more detail about a specific country clicked.
 
 ## The Features include
-* **Dark Mode** Currently unsupported.
-* **Search Bar** to look for the specific country of your choice
+* **Dark Mode**.
 
 
 <p align="center">
 	The Design concept for the app originated from a UI design provided by the HNG mentors.. 
 </p>
+<p>
+The Design is completely basic and with little font to image design.
+<p>
 
 ## Libraries Used
 * All libraries except for the default included can be seen below:
@@ -40,7 +42,7 @@ Explore is an application that explores all the various countries and various in
 *  Once you click the link you are redirect and shown an app there you select a preferred phone size and click play.
 
 ## Challenges
-*  I encountered various Chanllenges from working with the api to creating an argument that ment to aid in the details page and is currently still unresolved as so the application is **still in development**
+*  I encountered various Challenges from working with the api to creating an argument that ment to aid in the details page and has been resolved.
 
 
 
