@@ -9,15 +9,13 @@ Explore is an application that explores all the various countries and various in
 * **Details Page** this page shows in more detail about a specific country clicked.
 
 ## The Features include
-* **Dark Mode**.
+* **Dark Mode Aesthetic**.
 
 
 <p align="center">
 	The Design concept for the app originated from a UI design provided by the HNG mentors.. 
 </p>
-<p>
-The Design is completely basic and with little font to image design.
-<p>
+
 
 ## Libraries Used
 * All libraries except for the default included can be seen below:
