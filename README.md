@@ -5,24 +5,16 @@ Explore is an application that explores all the various countries and various in
 
 ## CodeBase
 * The Codebase was arranged in a MVVM structure with subfolders for the various parts of the application to improve scalability and easy access
-* A home page which shows all the coutries that are gotten from an api service.
-* **About Page** here all my necessary details can been found from work experience to certificates and awards.
-* **Projects Page** as in the name it shows the user all existing projects ive workede on or currently working on.
+* **Home page** which shows all the coutries that are gotten from an <a href="https://restcountries.com/v3.1/all">api</a>.
+* **Details Page** this page shows in more detail about a specific country clicked.
 
 ## The Features include
-* **Dark Mode** The app supports both a dark and light ui design aesthetic.
-* **Multi Language** On the app there is support for three languages which is English(default), French and German
+* **Dark Mode** Currently unsupported.
+* **Search Bar** to look for the specific country of your choice
 
 
 <p align="center">
-	The Design concept for the app originated from a UI	design on Dribble. 
-	
-  <a href="https://dribbble.com/shots/15061439-Personal-Portfolio-Resume-CV-Mobile-Shots/attachments/6789196?mode=media">
-   				A CV mobile Shot by Venge
-  </a>
-</p>
-<p>
-	Nothing was truly altered from the design since i truly resonated with it which is why i tried to retain all the parts that make up the UI
+	The Design concept for the app originated from a UI design provided by the HNG mentors.. 
 </p>
 
 ## Libraries Used
@@ -31,22 +23,24 @@ Explore is an application that explores all the various countries and various in
 * Retrofit
 * Glide
 * Lifecycle Viewmodel and livedata
-* **Other items** included png files and the json files gotten from various websites and 
-<a href="https://lottiefiles.com/blog/working-with-lottie/getting-started-with-lottie-animations-in-android-app">
-	LottieFiles
-</a> respectively.
+
 
 ## APP Links
-* Website preview(Appetize.io) of Apk: <a href="https://appetize.io/app/ltustklipbr6bqrkomsyyxvtha">My-Resume</a>
-* Android: [My Resume.zip](https://github.com/Esetobore/My-Resume/files/9942468/My.Resume.zip)
+* Website preview(Appetize.io) of Apk: <a href="">Explore</a>
+* Android:
 
+## How to Run the app
+**From the Apk**
+*  First step is to download the zip file from the link below 
+*  Second step get a extract the app from the zip file recommend you use zarchives
+*  Third step is to install and run the app 
 
-
+**From the Appetize link**
+*  This link is only a webview and doesn't install on device only serves as a means of interacting with the app without installing it.
+*  Once you click the link you are redirect and shown an app there you select a preferred phone size and click play.
 
 ## Challenges
-* 
-## Other Note
-* On this app all the data is hard coded in and given more time i would have wanted to allow it to support multiple entries from users who would want to use the app for thier own portfolio and the ability to link all data showed on the app to various refrences that can verify all the infromation entered.
+*  I encountered various Chanllenges from working with the api to creating an argument that ment to aid in the details page and is currently still unresolved as so the application is on finished
 
 
 
