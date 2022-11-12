@@ -27,14 +27,10 @@ Explore is an application that explores all the various countries and various in
 
 ## Libraries Used
 * All libraries except for the default included can be seen below:
-<a href="https://lottiefiles.com/blog/working-with-lottie/getting-started-with-lottie-animations-in-android-app">
-	LottieFiles
-</a>
-<p>
-	Solid Documentation and they have a range of free resources that can select from and utilize in customizing the splash screen
-</p>
-
-* Coroutine lifecycleScope dependencies. I tend to utilize coroutines anywhere i can and there isnt support for lifecyclescope out of the box so the dependency was needed
+* Coroutines
+* Retrofit
+* Glide
+* Lifecycle Viewmodel and livedata
 * **Other items** included png files and the json files gotten from various websites and 
 <a href="https://lottiefiles.com/blog/working-with-lottie/getting-started-with-lottie-animations-in-android-app">
 	LottieFiles
