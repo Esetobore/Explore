@@ -26,6 +26,7 @@ Explore is an application that explores all the various countries and various in
 
 
 ## APP Links
+**Check Challenges before proceed**
 * Website preview(Appetize.io) of Apk: <a href="https://appetize.io/app/6bs26twmsh2p7onlcopauk3fwe">Explore</a>
 * Android:[Explore.zip](https://github.com/Esetobore/Explore/files/10000737/Explore.zip)
 
@@ -43,7 +44,7 @@ Explore is an application that explores all the various countries and various in
 ## Challenges
 *  I encountered various Challenges from working with the api to creating an argument that ment to aid in the details page and has been resolved.
 *  Functionality of search bar is still un resolved hopefully be done before deadline
-*  i have been encountering an error that everytime the app is run it comes out blank all the parts of the app works even if internet connection is turned off the toast message resposible for the checks comes up as no internet so i dont know how to solve this problem.
+*  I have been encountering an error that everytime the app is run it comes out blank all the parts of the app works even if internet connection is turned off the toast message resposible for the checks comes up as no internet so i dont know how to solve this problem.
 
 
 
