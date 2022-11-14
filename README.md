@@ -41,6 +41,7 @@ Explore is an application that explores all the various countries and various in
 
 ## Challenges
 *  I encountered various Challenges from working with the api to creating an argument that ment to aid in the details page and has been resolved.
+*  Functionality of search bar is still un resolved hopefully be done before deadline
 
 
 
