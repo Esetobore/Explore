@@ -11,7 +11,6 @@ import com.example.explore.api.ExploreResponseItem
 import kotlinx.android.synthetic.main.country.view.*
 
 class ExploreAdapter:RecyclerView.Adapter<ExploreAdapter.ExploreViewHolder>() {
-   lateinit var exploreResponseItem : ExploreResponseItem
 
     inner class ExploreViewHolder(itemView: View):RecyclerView.ViewHolder(itemView)
 
@@ -38,8 +37,8 @@ class ExploreAdapter:RecyclerView.Adapter<ExploreAdapter.ExploreViewHolder>() {
     override fun onBindViewHolder(holder: ExploreViewHolder, position: Int) {
         val explore = diff.currentList[position]
         holder.itemView.apply {
-            txtCountryName.text = exploreResponseItem.name.toString()
-            txtCountryCap.text = exploreResponseItem.capital.toString()
+            txtCountryName.text = explore.name?.common
+         //   txtCountryCap.text = explore.capital?.toString()
             setOnItemClickListener {
                 onItemClickListener?.let { it(explore) }
             }

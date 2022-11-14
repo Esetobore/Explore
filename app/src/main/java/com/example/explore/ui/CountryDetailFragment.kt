@@ -35,7 +35,6 @@ class CountryDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = (activity as MainActivity).viewModel
-        val countryDetail = args.details
 
         args.details?.let { details ->
             val imageList = mutableListOf<String>()
