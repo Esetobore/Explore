@@ -38,7 +38,7 @@ Explore is an application that explores all the various countries and various in
 ## Challenges
 *  I encountered various Challenges from working with the api to creating an argument that ment to aid in the details page and has been resolved.
 *  Functionality of search bar is now fix and working
-*  App complete all outstanding modifications include language and filter section full app will be updated when its implemented
+*  App core functionality complete all outstanding modifications include language and filter section full app will be updated when its implemented
 
 
 
