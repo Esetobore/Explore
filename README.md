@@ -12,11 +12,6 @@ Explore is an application that explores all the various countries and various in
 * **Dark Mode Aesthetic**.
 
 
-<p align="center">
-	The Design concept for the app originated from a UI design provided by the HNG mentors.. 
-</p>
-
-
 ## Libraries Used
 * All libraries except for the default included can be seen below:
 * Coroutines
@@ -26,8 +21,9 @@ Explore is an application that explores all the various countries and various in
 
 
 ## APP Links
+**Check Challenges before proceed**
 * Website preview(Appetize.io) of Apk: <a href="">Explore</a>
-* Android:
+* Android: Update soon...
 
 ## How to Run the app
 **From the Apk**
@@ -41,7 +37,8 @@ Explore is an application that explores all the various countries and various in
 
 ## Challenges
 *  I encountered various Challenges from working with the api to creating an argument that ment to aid in the details page and has been resolved.
-*  Functionality of search bar is still un resolved hopefully be done before deadline
+*  Functionality of search bar is now fix and working
+*  App complete all outstanding modifications include language and filter section full app will be updated when its implemented
 
 
 
