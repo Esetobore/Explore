@@ -17,15 +17,12 @@ import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
     lateinit var viewModel: ExploreViewModel
-    private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val viewModelProviderFactory = ViewModelProviderFactory(application)
         viewModel = ViewModelProvider(this,viewModelProviderFactory).get(ExploreViewModel::class.java)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
 
         val fragHost = supportFragmentManager.findFragmentById(R.id.fragHost) as NavHostFragment?
         if (fragHost != null) {

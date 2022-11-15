@@ -49,7 +49,6 @@ init {
         }
 
     private suspend fun exploreCall(){
-        exploreAll.postValue(Resource.Loading())
         try {
             if(checkInternetConnection()){
                 val response = api.getExploreResponse()

@@ -5,6 +5,9 @@
       <map>
         <entry key="..\:/Users/Esetobore/AndroidStudioProjects/Explore/app/src/main/res/drawable/cancel.xml" value="0.166" />
         <entry key="..\:/Users/Esetobore/AndroidStudioProjects/Explore/app/src/main/res/drawable/ic_circular.xml" value="0.1915" />
+        <entry key="..\:/Users/Esetobore/AndroidStudioProjects/Explore/app/src/main/res/drawable/ic_circular_dark.xml" value="0.104" />
+        <entry key="..\:/Users/Esetobore/AndroidStudioProjects/Explore/app/src/main/res/drawable/ic_dark.xml" value="0.104" />
+        <entry key="..\:/Users/Esetobore/AndroidStudioProjects/Explore/app/src/main/res/drawable/ic_filter_dark.xml" value="0.104" />
         <entry key="..\:/Users/Esetobore/AndroidStudioProjects/Explore/app/src/main/res/drawable/ic_search.xml" value="0.2115" />
         <entry key="..\:/Users/Esetobore/AndroidStudioProjects/Explore/app/src/main/res/layout/activity_explore_page.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Esetobore/AndroidStudioProjects/Explore/app/src/main/res/layout/activity_main.xml" value="0.18658280922431866" />
@@ -17,12 +20,13 @@
         <entry key="..\:/Users/Esetobore/AndroidStudioProjects/Explore/app/src/main/res/layout/fragment_country_detail.xml" value="0.33" />
         <entry key="..\:/Users/Esetobore/AndroidStudioProjects/Explore/app/src/main/res/layout/fragment_country_fullview.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Esetobore/AndroidStudioProjects/Explore/app/src/main/res/layout/fragment_country_fullview.xml.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Esetobore/AndroidStudioProjects/Explore/app/src/main/res/layout/fragment_countrypage.xml" value="0.23670212765957446" />
+        <entry key="..\:/Users/Esetobore/AndroidStudioProjects/Explore/app/src/main/res/layout/fragment_countrypage.xml" value="0.22" />
         <entry key="..\:/Users/Esetobore/AndroidStudioProjects/Explore/app/src/main/res/layout/fragment_explore_page.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Esetobore/AndroidStudioProjects/Explore/app/src/main/res/layout/fragment_first.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Esetobore/AndroidStudioProjects/Explore/app/src/main/res/layout/fragment_second.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Esetobore/AndroidStudioProjects/Explore/app/src/main/res/layout/info.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Esetobore/AndroidStudioProjects/Explore/app/src/main/res/layout/language__view.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Esetobore/AndroidStudioProjects/Explore/app/src/main/res/layout/language_view.xml" value="0.15925925925925927" />
         <entry key="..\:/Users/Esetobore/AndroidStudioProjects/Explore/app/src/main/res/menu/search.xml" value="0.20416666666666666" />
       </map>
     </option>

@@ -3,12 +3,17 @@ package com.example.explore.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Filter
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.explore.R
 import com.example.explore.api.ExploreResponseItem
+import com.example.explore.util.ExploreItem
 import kotlinx.android.synthetic.main.country.view.*
+import java.util.*
+import kotlin.collections.ArrayList
 
 class ExploreAdapter:RecyclerView.Adapter<ExploreAdapter.ExploreViewHolder>() {
 
@@ -38,7 +43,8 @@ class ExploreAdapter:RecyclerView.Adapter<ExploreAdapter.ExploreViewHolder>() {
         val explore = diff.currentList[position]
         holder.itemView.apply {
             txtCountryName.text = explore.name?.common
-         //   txtCountryCap.text = explore.capital?.toString()
+            txtCountryCap.text = explore.capital?.get(0)
+            Glide.with(this).load(explore.flag).into(ImgFlag)
             setOnItemClickListener {
                 onItemClickListener?.let { it(explore) }
             }
@@ -49,9 +55,13 @@ class ExploreAdapter:RecyclerView.Adapter<ExploreAdapter.ExploreViewHolder>() {
     override fun getItemCount(): Int {
        return diff.currentList.size
     }
+
+    fun submitList(list1: List<ExploreResponseItem>) = diff.submitList(list1)
+
     private var onItemClickListener : ((ExploreResponseItem) -> Unit)? = null
 
     fun setOnItemClickListener(listener: (ExploreResponseItem) -> Unit){
         onItemClickListener = listener
     }
-}
+
+    }

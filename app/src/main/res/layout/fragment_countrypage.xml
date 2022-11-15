@@ -3,35 +3,34 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     style="@style/SCREEN"
+    android:layout_height="match_parent"
     tools:context=".ui.Countrypage">
 
     <RelativeLayout
         android:id="@+id/Explore_Mode"
-        android:layout_width="411dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="11dp"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/EXPLORE"
+            style="@style/TEXT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="10dp"
-            style="@style/TEXT"
             android:fontFamily="@font/elsie_swash_caps_black"
             android:text="Explore"
             android:textSize="30sp" />
 
-        <ImageButton
+        <ImageView
             android:id="@+id/mode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/BUTTON"
             android:layout_alignBottom="@id/EXPLORE"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="10dp"
@@ -51,31 +50,36 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/lang_Btn"
-        android:layout_width="63dp"
-        android:layout_height="23dp"
+        android:layout_width="60dp"
+        android:layout_height="28dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="132dp"
+        style="@style/CARD"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp">
 
             <ImageView
+                android:id="@+id/ic_circular"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_circular" />
+                android:src="@drawable/ic_circular"
+                android:layout_margin="2dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="EN"
-                android:fontFamily="@font/axiforma_bold"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
                 style="@style/TEXT"
+                android:fontFamily="@font/axiforma_medium"
+                android:text="EN"
                 android:textStyle="bold" />
-        </LinearLayout>
+        </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -84,14 +88,17 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="324dp"
         android:layout_marginTop="132dp"
+        style="@style/CARD"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp">
 
             <ImageView
+                android:id="@+id/ic_filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_filter" />
@@ -99,13 +106,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:text="Filter"
-                android:fontFamily="@font/axiforma_bold"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="3dp"
                 style="@style/TEXT"
+                android:fontFamily="@font/axiforma_medium"
+                android:text="Filter"
                 android:textStyle="bold" />
-
-        </LinearLayout>
+        </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView

@@ -1,14 +1,12 @@
 package com.example.explore.ui
 
-import android.Manifest
 import android.app.Dialog
-import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Log
 import android.view.*
+import android.widget.SearchView
 import android.widget.Toast
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
@@ -16,12 +14,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.explore.MainActivity
 import com.example.explore.R
 import com.example.explore.adapter.ExploreAdapter
+import com.example.explore.api.ExploreResponseItem
 import com.example.explore.databinding.FragmentCountrypageBinding
+import com.example.explore.util.ExploreItem
 import com.example.explore.util.Resource
 import com.example.explore.viewmodel.ExploreViewModel
-import kotlinx.android.synthetic.main.filter_view.*
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.fragment_countrypage.*
-import kotlinx.android.synthetic.main.language_view.*
 
 
 class Countrypage : Fragment() {
@@ -29,6 +28,7 @@ class Countrypage : Fragment() {
     private val binding get() = _binding!!
     lateinit var viewModel: ExploreViewModel
     lateinit var exploreAdapter: ExploreAdapter
+    var systemMode = false
      val TAG = "CountryPage"
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?
@@ -63,23 +63,40 @@ class Countrypage : Fragment() {
                              Toast.makeText(activity, "Error: $message",Toast.LENGTH_SHORT).show()
                          }
                      }
-                 is Resource.Loading ->{
-
-                 }
              }
          })
                 filter_btn.setOnClickListener {
                     viewFilterDialog()
-                    cancel_btn.setOnClickListener {
-                        dismissDialog()
-                    }
                 }
+
                 lang_Btn.setOnClickListener {
-                        viewLanguageDialog()
-                    cancel_btn_lang.setOnClickListener {
-                        dismissDialog()
+                    viewLanguageDialog()
+                }
+                mode.setOnClickListener {
+                    systemMode= !systemMode
+                    if (systemMode) {
+                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                        mode.setImageResource(R.drawable.ic_dark)
+                        ic_circular.setImageResource(R.drawable.ic_circular_dark)
+                        ic_filter.setImageResource(R.drawable.ic_filter_dark)
+
+                    }
+                    else {
+                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                        mode.setImageResource(R.drawable.ic_light)
+                        ic_circular.setImageResource(R.drawable.ic_circular)
+                        ic_filter.setImageResource(R.drawable.ic_filter)
                     }
                 }
+         if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES){
+             mode.setImageResource(R.drawable.ic_dark)
+             ic_circular.setImageResource(R.drawable.ic_circular_dark)
+             ic_filter.setImageResource(R.drawable.ic_filter_dark)
+         }else{
+             mode.setImageResource(R.drawable.ic_light)
+             ic_circular.setImageResource(R.drawable.ic_circular)
+             ic_filter.setImageResource(R.drawable.ic_filter)
+         }
 
     }
     private fun setupRecyclerView(){
@@ -113,9 +130,52 @@ class Countrypage : Fragment() {
             dialog.window!!.setGravity(Gravity.BOTTOM)
         }
     }
-    private fun dismissDialog() {
-        activity?.let { Dialog(it) }?.dismiss()
+    private fun setUpSearch(items: List<ExploreResponseItem>) {
+       etSearch.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
+           androidx.appcompat.widget.SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                query?.let {
+                    val itemQuery = setUpSearchCollector(items, query)
+                    Log.d("search query", "$itemQuery")
+                    if (itemQuery.isNotEmpty()) {
+
+                        exploreAdapter.submitList(itemQuery)
+                    } else {
+                        Snackbar.make(
+                            requireView(),
+                            "ERROR! check your query and retry",
+                            Snackbar.LENGTH_LONG
+                        ).show()
+                    }
+                    return true
+                } ?: Log.d("search query", "No query entered")
+                Snackbar.make(
+                    requireView(),
+                    "ERROR!No query entered check your query and retry",
+                    Snackbar.LENGTH_LONG
+                ).show()
+                return true
+
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                return false
+            }
+
+        })
+
     }
 
+    private fun setUpSearchCollector(items: List<ExploreResponseItem>, query: String): List<ExploreResponseItem> {
+        return items.filter { mappedItems ->
+            mappedItems.name?.common?.lowercase()
+                ?.contains(query) ?: false
+        }
+    }
+
+
+
 }
+
+
 
