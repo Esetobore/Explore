@@ -27,8 +27,8 @@ Explore is an application that explores all the various countries and various in
 
 ## How to Run the app
 **From the Apk**
-*  First step is to download the zip file from the link below 
-*  Second step get a extract the app from the zip file recommend you use zarchives
+*  First step is to download the zip file from the link above 
+*  Second step extract the app from the zip file. Recommend you use zarchives
 *  Third step is to install and run the app 
 
 **From the Appetize link**
